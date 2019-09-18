@@ -57,6 +57,8 @@ passportRouter.post("/signup", (req, res) => {
 passportRouter.get("/login", (req, res) => {
   if (req.query.error == 1) {
     res.render("passport/login", { message: "Error while trying to Log In" });
+  } else {
+    res.render("passport/login");
   }
 });
 
